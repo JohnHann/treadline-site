@@ -104,9 +104,13 @@ trip map. Specifically, the app reads:</p>
 steps, or other health measurements). Workout data is used solely to draw routes on your
 trip map. It is not used for advertising, marketing, or any form of data mining, and it
 is not shared with third parties. When you import a workout route, its coordinates
-become part of that trip's route geometry and are stored with the trip as described in
-section 2.4. Our diagnostics (section 2.6) record only that an import happened; they
-never include workout routes, distances, times, or any other Health data.</p>
+become part of that trip's route geometry on your device. <strong>Workout routes are
+never copied to iCloud:</strong> when a trip syncs (section 2.4), the synced copy carries
+only a reference to the workout, not the route itself, and any other device of yours
+restores the route by reading the same workout from its own Apple Health data, with your
+permission on that device. Our diagnostics (section 2.6) record only that an import or
+restore happened; they never include workout routes, distances, times, or any other
+Health data.</p>
 
 <h3>2.3 Files you import</h3>
 <p>You can also import a GPX route file from another app or service (for example, a
@@ -115,9 +119,10 @@ to your trip as described in section 2.4, and the file is not uploaded to us.</p
 
 <h3>2.4 Your trips (stored on your device and in your iCloud account)</h3>
 <p>The trips you create consist of stop locations and place names, dates, trip titles,
-references to the photos you chose, route geometry (including any imported workout or GPX
-routes), and your presentation settings (theme, music selection, and similar). This data
-is stored in a private database on your device.</p>
+references to the photos you chose, route geometry (including any imported GPX routes and,
+on the device where you imported them, workout routes), and your presentation settings
+(theme, music selection, and similar). This data is stored in a private database on your
+device.</p>
 <p>If your device is signed in to iCloud, Treadline also stores a copy of this trip data
 in <strong>your own private iCloud database</strong> (Apple's CloudKit) so your trips
 stay in sync across your devices. That copy lives in your Apple account, not on any
@@ -125,9 +130,10 @@ server of ours; we have no access to it and cannot read, retrieve, or delete it.
 protects it under the <a href="https://www.apple.com/legal/internet-services/icloud/">iCloud
 Terms</a> and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>,
 and encrypts it in transit and at rest. Your photos and videos themselves are never
-copied to iCloud by Treadline; the synced data holds only references to them. You can
-turn iCloud sync off for Treadline or delete the synced data at any time (see
-section 6).</p>
+copied to iCloud by Treadline; the synced data holds only references to them. Workout
+routes from Apple Health are likewise never copied to iCloud (section 2.2); the synced
+data holds only a reference to the workout. You can turn iCloud sync off for Treadline or
+delete the synced data at any time (see section 6).</p>
 
 <h3>2.5 Map coordinates sent to build routes and name places</h3>
 <p>To draw routes between your stops and give stops readable place names, the app sends
@@ -175,9 +181,10 @@ or websites.</p>
 <h3>2.7 Exported movies</h3>
 <p>When you export a trip movie, the video is rendered entirely on your device. It
 contains your chosen photos and clips, the animated map of your trip, and place-name
-titles, so treat it like any personal video. Nothing is shared until you choose a
-destination in the share sheet (Messages, AirDrop, Save to Photos, and so on). We never
-receive a copy.</p>
+titles, so treat it like any personal video. If you added a workout route from Apple
+Health to the trip, the map in the movie shows that route too. Nothing is shared until
+you choose a destination in the share sheet (Messages, AirDrop, Save to Photos, and so
+on); sharing the movie is your decision and your act. We never receive a copy.</p>
 
 <h3>2.8 Information you send us</h3>
 <p>If you email us, we receive your email address and whatever you include in the
