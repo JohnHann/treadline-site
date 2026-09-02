@@ -17,10 +17,14 @@
   }
   h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
   h2 { font-size: 1.25rem; margin-top: 2.25rem; border-bottom: 1px solid #d2d2d7; padding-bottom: 0.3rem; }
+  h3 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.25rem; }
   p.meta { color: #6e6e73; font-size: 0.9rem; margin-top: 0; }
   ul { padding-left: 1.4rem; }
   li { margin-bottom: 0.4rem; }
   a { color: #0066cc; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; margin: 1rem 0; }
+  th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid #d2d2d7; }
+  th { font-weight: 600; }
   .summary {
     background: #f5f5f7;
     border-radius: 12px;
@@ -30,6 +34,7 @@
   @media (prefers-color-scheme: dark) {
     body { color: #f5f5f7; background: #1d1d1f; }
     h2 { border-bottom-color: #424245; }
+    th, td { border-bottom-color: #424245; }
     p.meta { color: #a1a1a6; }
     .summary { background: #2c2c2e; }
     a { color: #2997ff; }
@@ -39,150 +44,300 @@
 <body>
 
 <h1>Treadline Privacy Policy</h1>
-<p class="meta">Effective date: July 18, 2026 &middot; Trailside Table, LLC</p>
+<p class="meta">Effective date: September 1, 2026 &middot; Last updated: September 1, 2026 &middot; Trailside Table, LLC</p>
 
 <div class="summary">
   <p><strong>The short version:</strong> Treadline turns your photo library into trip
-  movies, and it does that on your device. Your photos and videos are never uploaded.
-  We don't have user accounts, we don't show ads, we don't sell or share your data, and
-  we don't track you across apps. The only data that leaves your device is (1) map
+  movies, and it does that on your device. Your photos and videos are never uploaded to
+  us. There are no user accounts, no advertising, no sale or sharing of personal data,
+  and no tracking across other companies' apps or websites. Your trips are stored on your
+  device and, if you are signed in to iCloud, in your own private iCloud account, where we
+  cannot read them. The only data that reaches other companies' servers is (1) map
   coordinates used to draw routes and name places, sent without any account or
-  identifier from us, and (2) crash and usage diagnostics that contain no photos,
-  locations, place names, or dates and that we never link to your identity. Those
-  requests do travel to other companies' servers from your device, so those companies
-  see your IP address and apply their own privacy policies.</p>
+  identifier from us, and (2) optional crash and usage diagnostics that contain no photos,
+  locations, place names, or dates and are never linked to your identity. Those requests
+  travel from your device, so the receiving companies see your IP address and apply
+  their own privacy policies.</p>
 </div>
 
-<h2>Who we are</h2>
-<p>Treadline is made by Trailside Table, LLC ("we", "us"). This policy describes what the
-Treadline iOS app does with your information. If you have any questions, contact us at
+<h2>1. Who we are and what this policy covers</h2>
+<p>Treadline is an iOS app made by Trailside Table, LLC ("Treadline", "we", "us", "our").
+We are the data controller for the limited personal data described in this policy that
+we actually receive. This policy explains what information the Treadline app handles,
+what leaves your device, why, who receives it, how long it is kept, and the choices and
+rights you have. It applies to the Treadline app only; it does not cover Apple's own
+services or the third-party services linked below, each of which has its own policy.</p>
+<p>Questions or requests can be sent to
 <a href="mailto:feedback@trailsidetable.com">feedback@trailsidetable.com</a>.</p>
 
-<h2>Your photos stay on your device</h2>
+<h2>2. Information we handle, and how we use it</h2>
+
+<h3>2.1 Your photo library (processed on your device)</h3>
 <p>Treadline asks for read-only access to your photo library so it can discover trips
 from your photos' timestamps and location metadata, and play them back as animated map
 tours. All of this happens on your device:</p>
 <ul>
-  <li><strong>Reading:</strong> the app reads photo timestamps, GPS metadata, favorite
-  status, and thumbnails to group photos into trips and stops. It never modifies,
-  adds, or deletes anything in your library — the app is built with a guard that
-  prevents any photo-modification code from shipping.</li>
+  <li><strong>What is read:</strong> photo and video timestamps, GPS metadata, favorite
+  status, and thumbnails, in order to group photos into trips and stops.</li>
+  <li><strong>What is never done:</strong> the app never modifies, adds, or deletes
+  anything in your library. It is built with a safeguard that prevents any
+  photo-modification code from shipping.</li>
   <li><strong>Analysis:</strong> the app uses Apple's on-device Vision framework to pick
-  the best photos for a tour (sharpness, exposure, whether faces are well-lit). This is
-  quality scoring, not facial recognition — it does not identify who is in a photo, and
-  no analysis results leave your device.</li>
-  <li><strong>Storage:</strong> your trips (stop locations, place names, dates, photo
-  references, and routes) are stored in a private database on your device.</li>
+  the best photos for a tour (sharpness, exposure, whether faces are well lit). This is
+  quality scoring, not facial recognition: it does not identify who is in a photo, and no
+  analysis results leave your device.</li>
 </ul>
-<p>Your photos, videos, and photo metadata are never uploaded to us or anyone else. The
-only way imagery leaves the device is when <em>you</em> export a trip movie and choose
-to share or save it (see "Exported movies" below).</p>
+<p>Your photos, videos, and photo metadata are never uploaded to us or to anyone else.
+The only way imagery leaves your device is when <em>you</em> export a trip movie and
+choose to share or save it (see section 2.7).</p>
 
-<h2>Map coordinates sent to build routes and name places</h2>
+<h3>2.2 Apple Health workout routes (processed on your device)</h3>
+<p>If you choose to import a workout, Treadline asks for read-only access to specific
+Apple Health data so it can draw the real trail you walked, hiked, ran, or cycled on your
+trip map. Specifically, the app reads:</p>
+<ul>
+  <li><strong>Workouts:</strong> the workout type, its start and end time, and its total
+  walking, running, or cycling distance.</li>
+  <li><strong>Workout routes:</strong> the GPS route recorded for the workout.</li>
+</ul>
+<p>Treadline never writes to Apple Health, and reads nothing else from it (no heart rate,
+steps, or other health measurements). Workout data is used solely to draw routes on your
+trip map. It is not used for advertising, marketing, or any form of data mining, and it
+is not shared with third parties. When you import a workout route, its coordinates
+become part of that trip's route geometry and are stored with the trip as described in
+section 2.4. Our diagnostics (section 2.6) record only that an import happened; they
+never include workout routes, distances, times, or any other Health data.</p>
+
+<h3>2.3 Files you import</h3>
+<p>You can also import a GPX route file from another app or service (for example, a
+Garmin, Strava, or AllTrails export). The file is read on your device, its route is added
+to your trip as described in section 2.4, and the file is not uploaded to us.</p>
+
+<h3>2.4 Your trips (stored on your device and in your iCloud account)</h3>
+<p>The trips you create consist of stop locations and place names, dates, trip titles,
+references to the photos you chose, route geometry (including any imported workout or GPX
+routes), and your presentation settings (theme, music selection, and similar). This data
+is stored in a private database on your device.</p>
+<p>If your device is signed in to iCloud, Treadline also stores a copy of this trip data
+in <strong>your own private iCloud database</strong> (Apple's CloudKit) so your trips
+stay in sync across your devices. That copy lives in your Apple account, not on any
+server of ours; we have no access to it and cannot read, retrieve, or delete it. Apple
+protects it under the <a href="https://www.apple.com/legal/internet-services/icloud/">iCloud
+Terms</a> and <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>,
+and encrypts it in transit and at rest. Your photos and videos themselves are never
+copied to iCloud by Treadline; the synced data holds only references to them. You can
+turn iCloud sync off for Treadline or delete the synced data at any time (see
+section 6).</p>
+
+<h3>2.5 Map coordinates sent to build routes and name places</h3>
 <p>To draw routes between your stops and give stops readable place names, the app sends
-coordinates <em>derived from your photos' location metadata</em> to mapping services.
-The app never reads your device's live location — it has no access to Location
-Services at all.</p>
+coordinates <em>derived from your photos' location metadata or from an imported route</em>
+to mapping services. The app never reads your device's live location; it has no access
+to Location Services at all.</p>
 <ul>
   <li><strong>Apple Maps services</strong> (map display, directions, reverse geocoding,
-  place search), covered by <a href="https://www.apple.com/legal/privacy/">Apple's
+  and place search), covered by <a href="https://www.apple.com/legal/privacy/">Apple's
   privacy policy</a>.</li>
-  <li><strong>OpenRouteService</strong> (operated by HeiGIT gGmbH) and the
-  <strong>OpenStreetMap Overpass API</strong>, used to look up hiking-trail and ferry
-  route geometry for the relevant legs of a trip. See the
-  <a href="https://openrouteservice.org/privacy-policy/">openrouteservice privacy
-  policy</a> and <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OSM
+  <li><strong>openrouteservice</strong> (operated by HeiGIT gGmbH, Germany) and the
+  <strong>OpenStreetMap Overpass API</strong> (operated by the OpenStreetMap
+  Foundation), used to look up hiking-trail and ferry route geometry for the relevant
+  legs of a trip. See the <a href="https://heigit.org/privacy-policy/">HeiGIT privacy
+  policy</a> and the <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
   Foundation privacy policy</a>.</li>
 </ul>
-<p>These requests carry coordinates and nothing about you from us: no name, no
-account, no photo content, and no identifier that links the request to you. We do not
-store your coordinates on any server of ours. A request still travels from your device
-to those companies, so they receive your IP address, and what they do with it is
-governed by their policies linked above rather than by this one — we can describe our
-own conduct, not theirs.</p>
+<p>These requests carry coordinates and nothing about you from us: no name, no account,
+no photo content, and no identifier that links the request to you. We do not store your
+coordinates on any server of ours. A request still travels from your device to those
+providers, so they receive your IP address, and what they do with it is governed by their
+policies linked above rather than by this one.</p>
 
-<h2>Diagnostics and usage data</h2>
-<p>So we can fix crashes and understand which features work, the app sends diagnostic
+<h3>2.6 Diagnostics and usage data (optional)</h3>
+<p>So we can fix crashes and understand which features work, the app can send diagnostic
 and usage telemetry to <a href="https://www.datadoghq.com/legal/privacy/">Datadog</a>,
 our monitoring provider. This includes crash reports, performance measurements (for
 example, how long a route lookup took), which screens are used, and feature-usage
 events (for example, "a tour was exported").</p>
-<p>This telemetry is deliberately scrubbed before it leaves your device. It never
-includes your photos, photo identifiers, coordinates, place names, trip titles, or trip
-dates. It is not linked to your identity — there are no accounts, and we never attach a
-name, email, or other personal identifier. It does include a randomly generated
-session/device identifier (used only to group events from the same app install), device
-model and OS version, and the app version, and Datadog receives your IP address with
-the request. That identifier persists across sessions, so this data is more accurately
-described as pseudonymous than anonymous: it is not tied to who you are, but events
-from a single app install can be grouped together. We do not use this data for advertising, do
-not share it with data brokers, and do not track you across other companies' apps or
-websites.</p>
+<p>This telemetry is filtered on your device before it is sent. It never includes your
+photos, photo identifiers, coordinates, place names, trip titles, trip dates, or Health
+data. It is not linked to your identity: there are no accounts, and we never attach a
+name, email address, or other personal identifier. It does include a randomly generated
+session and app-install identifier (used only to group events from the same install),
+your device model and OS version, the app version, and Datadog receives your IP address
+with the request. Because the install identifier persists across sessions, this data is
+pseudonymous rather than anonymous: it is not tied to who you are, but events from a
+single app install can be grouped together.</p>
+<p>Diagnostics are on by default and you can turn them off at any time in the app under
+<strong>Settings &rarr; Privacy &rarr; Share usage &amp; diagnostics</strong>. Turning
+them off stops collection immediately. We do not use this data for advertising, do not
+share it with data brokers, and do not use it to track you across other companies' apps
+or websites.</p>
 
-<h2>Exported movies</h2>
+<h3>2.7 Exported movies</h3>
 <p>When you export a trip movie, the video is rendered entirely on your device. It
 contains your chosen photos and clips, the animated map of your trip, and place-name
-titles — so treat it like any personal video. Nothing is shared until you choose a
+titles, so treat it like any personal video. Nothing is shared until you choose a
 destination in the share sheet (Messages, AirDrop, Save to Photos, and so on). We never
 receive a copy.</p>
 
-<h2>What we don't do</h2>
+<h3>2.8 Information you send us</h3>
+<p>If you email us, we receive your email address and whatever you include in the
+message. We use it only to respond to you and keep it only as long as needed to do so.</p>
+
+<h2>3. What we don't do</h2>
 <ul>
-  <li>No user accounts, and no collection of your name, email, or contacts.</li>
-  <li>No advertising, no ad SDKs, and no "tracking" as defined by Apple's App Tracking
-  Transparency framework.</li>
-  <li>No selling, renting, or sharing of personal data with data brokers — ever.</li>
+  <li>No user accounts, and no collection of your name, email address, or contacts.</li>
+  <li>No advertising, no advertising SDKs, and no "tracking" as defined by Apple's App
+  Tracking Transparency framework.</li>
+  <li>No selling, renting, or sharing of personal data with data brokers or for
+  advertising purposes.</li>
   <li>No reading of your device's live location.</li>
-  <li>No uploading of photos, videos, or photo metadata.</li>
+  <li>No uploading of photos, videos, photo metadata, or Health data.</li>
+  <li>No use of Photos or Health data to build profiles or contact lists.</li>
 </ul>
 
-<h2>Data retention and deletion</h2>
+<h2>4. Service providers and other recipients</h2>
+<p>We share data only with the service providers listed below, only the minimal data
+described in this policy, and only so they can provide their service to the app. We do
+not sell personal data. Each provider is bound by its own privacy policy and terms to
+protect that data, and none of them is permitted to use it to advertise to you, to sell
+it, or to use it for any purpose other than providing the service. Where we share data
+with a provider, we require the same or equivalent protection for it as this policy
+describes.</p>
+<table>
+  <tr><th>Provider</th><th>What it receives</th><th>Why</th></tr>
+  <tr>
+    <td>Apple (Maps, iCloud)</td>
+    <td>Photo-derived coordinates for map, directions, geocoding, and place search;
+    your trip data in your own iCloud account</td>
+    <td>Draw maps and routes; sync your trips across your devices</td>
+  </tr>
+  <tr>
+    <td>HeiGIT gGmbH (openrouteservice)</td>
+    <td>Coordinates for a trail leg; your IP address</td>
+    <td>Hiking-trail route geometry</td>
+  </tr>
+  <tr>
+    <td>OpenStreetMap Foundation (Overpass API)</td>
+    <td>Coordinates for a ferry or trail leg; your IP address</td>
+    <td>Ferry and trail route geometry</td>
+  </tr>
+  <tr>
+    <td>Datadog, Inc.</td>
+    <td>Crash reports, performance and usage events, a random install identifier,
+    device model and OS version, app version; your IP address</td>
+    <td>Crash reporting and product analytics (only if diagnostics are on)</td>
+  </tr>
+</table>
+<p>We may also disclose information if required by law, or to protect our rights or the
+safety of others. If Treadline is ever transferred to another owner, the limited data
+described here would transfer with it under this policy, and we would update this
+policy accordingly.</p>
+
+<h2>5. Data retention and deletion</h2>
 <ul>
-  <li><strong>On your device:</strong> trips and app data live only on your device. You
-  can delete individual trips in the app, and deleting the app removes all of its data.
-  This does not touch your photo library.</li>
-  <li><strong>Diagnostics:</strong> telemetry sent to Datadog is retained for a limited
-  period for troubleshooting and then automatically deleted. Because it carries no name
-  or account, we generally cannot connect stored telemetry to a specific person; if you
-  contact us we will make reasonable efforts to identify and delete data associated with
-  you.</li>
+  <li><strong>On your device:</strong> trips and app data live on your device for as
+  long as you keep them. You can delete individual trips in the app. Deleting the app
+  removes all of its data from that device. Neither action touches your photo library or
+  Apple Health.</li>
+  <li><strong>In your iCloud account:</strong> synced trip data stays in your iCloud
+  account until you delete it. Deleting a trip in the app deletes its synced copy.
+  Deleting the app does <em>not</em> delete the iCloud copy; to remove it, delete the
+  trips in the app first, or delete Treadline's iCloud data from your device's
+  iCloud settings (see section 6).</li>
+  <li><strong>Diagnostics:</strong> telemetry sent to Datadog is retained for a short
+  rolling period (currently no longer than 30 days) and then automatically deleted.
+  Because it carries no name or account, we generally cannot connect stored telemetry to
+  a specific person; if you contact us we will make reasonable efforts to identify and
+  delete data associated with you.</li>
   <li><strong>Mapping requests:</strong> route and place-name requests are processed
-  transiently by the services listed above under their own policies.</li>
+  transiently by the services listed above under their own policies. We keep none of
+  them.</li>
+  <li><strong>Email:</strong> correspondence is kept only as long as needed to handle
+  your request.</li>
 </ul>
 
-<h2>Your choices and rights</h2>
+<h2>6. Your choices</h2>
 <ul>
-  <li>You can deny or revoke photo library access at any time in
-  Settings&nbsp;&rarr;&nbsp;Privacy&nbsp;&amp;&nbsp;Security&nbsp;&rarr;&nbsp;Photos
-  (the app can't build trips without it, but that's your call).</li>
-  <li>You can withdraw consent to diagnostics collection or request deletion of your
-  data by contacting us at
+  <li><strong>Photos:</strong> you can deny, limit, or revoke photo library access at
+  any time in iOS Settings &rarr; Privacy &amp; Security &rarr; Photos. The app cannot
+  build trips without it, but that is your call.</li>
+  <li><strong>Apple Health:</strong> workout import is optional. You can deny or revoke
+  access at any time in iOS Settings &rarr; Privacy &amp; Security &rarr; Health &rarr;
+  Treadline. Already-imported routes remain part of your trips until you delete them.</li>
+  <li><strong>iCloud sync:</strong> you can stop Treadline from using iCloud in iOS
+  Settings &rarr; [your name] &rarr; iCloud &rarr; Saved to iCloud (or "Apps Using
+  iCloud"), and delete Treadline's stored iCloud data from iOS Settings &rarr;
+  [your name] &rarr; iCloud &rarr; Manage Account Storage.</li>
+  <li><strong>Diagnostics:</strong> turn them off in the app under Settings &rarr;
+  Privacy &rarr; Share usage &amp; diagnostics.</li>
+  <li><strong>Deletion requests:</strong> for anything we hold ourselves, email
   <a href="mailto:feedback@trailsidetable.com">feedback@trailsidetable.com</a>.</li>
-  <li>Depending on where you live (for example, the EU/EEA, UK, or California), you may
-  have additional rights to access, correct, or delete personal data, and the right not
-  to be discriminated against for exercising them. Contact us and we will honor
-  applicable requests.</li>
 </ul>
 
-<h2>Third parties we work with</h2>
-<p>We share data only with the service providers named in this policy — Apple Maps
-services, OpenRouteService (HeiGIT), the OpenStreetMap Overpass API, and Datadog — and
-only the minimal data described above, solely so they can provide their service to the
-app. Each is bound by its own privacy policy (linked above) to protect that data; none
-of them is permitted to use it to advertise to you or to sell it.</p>
+<h2>7. Your rights</h2>
+<p>Depending on where you live, you may have rights to access, correct, delete, or
+receive a copy of your personal data, to object to or restrict certain processing, and
+to withdraw consent. You can exercise the choices above yourself at any time; for
+anything else, contact us at the address in section 11. We will respond within the time
+required by applicable law, and we will not discriminate against you for exercising your
+rights. Because most of your data never reaches us, we may need to explain that we hold
+nothing that identifies you, or ask for enough information to locate the pseudonymous
+diagnostics associated with your install.</p>
 
-<h2>Children</h2>
+<h3>7.1 European Economic Area, United Kingdom, and Switzerland</h3>
+<p>Processing that takes place entirely on your device, or in your own iCloud account, is
+under your control and is not something we receive. For the data we do receive, our legal
+bases are:</p>
+<ul>
+  <li><strong>Consent</strong> (GDPR Article 6(1)(a)) for diagnostics and usage data,
+  which you can withdraw at any time with the in-app switch described above.</li>
+  <li><strong>Performance of the service you requested</strong> (Article 6(1)(b)) and
+  our <strong>legitimate interests</strong> (Article 6(1)(f)) in operating a working
+  app, for the transient mapping requests that draw your routes and name your stops.</li>
+</ul>
+<p>You also have the right to lodge a complaint with your local data protection
+supervisory authority.</p>
+
+<h3>7.2 California and other US states</h3>
+<p>We do not sell personal information, and we do not share it for cross-context
+behavioral advertising, as those terms are defined under the California Consumer Privacy
+Act and similar state laws. We do not use or disclose sensitive personal information for
+purposes other than providing the app. The categories of personal information we collect
+are identifiers (a random install identifier and IP address), device and usage
+information, and, for mapping requests, photo-derived geolocation data, each for the
+purposes described in section 2. Because the app is not a website and does not use
+tracking cookies, it does not respond to browser "Do Not Track" signals.</p>
+
+<h2>8. International transfers</h2>
+<p>We are based in the United States. Diagnostics data is processed by Datadog in the
+United States. Mapping requests to openrouteservice and the Overpass API are processed in
+Germany and the European Union. Apple processes iCloud and Maps data under its own
+policies. Where personal data from the EEA, UK, or Switzerland is transferred to the
+United States, our providers rely on recognized transfer mechanisms such as the European
+Commission's Standard Contractual Clauses.</p>
+
+<h2>9. Security</h2>
+<p>Data on your device is protected by iOS's built-in app sandboxing and device
+encryption. Trip data synced to iCloud is encrypted by Apple in transit and at rest. All
+network requests the app makes use encrypted (TLS) connections. No method of storage or
+transmission is perfectly secure, so we cannot guarantee absolute security, but we
+deliberately minimize what leaves your device so there is very little to protect
+elsewhere.</p>
+
+<h2>10. Children</h2>
 <p>Treadline is not directed at children under 13 (or the equivalent minimum age in your
 region), and we do not knowingly collect personal information from children. All photo
-processing happens on-device regardless of the user's age.</p>
+and Health processing happens on the device regardless of the user's age. If you
+believe a child has provided us with personal information, contact us and we will delete
+it.</p>
 
-<h2>Changes to this policy</h2>
-<p>If we change what data the app handles — for example, if we add optional iCloud sync
-for your trips — we will update this policy, adjust the effective date above, and, for
-material changes, note it in the app. The current version will always be available at
+<h2>11. Changes to this policy</h2>
+<p>If we change what data the app handles, we will update this policy and its effective
+date, and, for material changes, note it in the app. The current version is always
+available from the app's Settings screen and at
 <a href="https://johnhann.github.io/treadline-site/privacy.html">https://johnhann.github.io/treadline-site/privacy.html</a>.</p>
 
-<h2>Contact</h2>
+<h2>12. Contact</h2>
 <p>Trailside Table, LLC<br>
 <a href="mailto:feedback@trailsidetable.com">feedback@trailsidetable.com</a></p>
 
